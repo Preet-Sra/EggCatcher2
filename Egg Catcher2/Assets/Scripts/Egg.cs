@@ -19,6 +19,7 @@ public class Egg : MonoBehaviour
         {
             Destroy(gameObject);
             //Incraese scxore
+            SoundManager.instance.PlayEggsColected();
             UIManager.instance.IncreaseScore();
         }
 
@@ -26,6 +27,7 @@ public class Egg : MonoBehaviour
         {
             Destroy(gameObject);
             // Reduce Lifes
+            SoundManager.instance.PlayEggsMissed();
             UIManager.instance.ReduceLife();
         }
     }

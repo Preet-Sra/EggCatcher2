@@ -72,7 +72,6 @@ public class UIManager : MonoBehaviour
             Debug.Log("Won");
         }
 
-        
     }
 
     
@@ -91,6 +90,8 @@ public class UIManager : MonoBehaviour
             target.text = "Target Count: " + GameManager.instance.target;
             
             Time.timeScale = 0;
+            if(PlayerPrefs.GetInt("AdsRemoved")!=1)
+                AdsInit.instance.GetComponent<InterstitialAds>().ShowAd();
         }
 
 
